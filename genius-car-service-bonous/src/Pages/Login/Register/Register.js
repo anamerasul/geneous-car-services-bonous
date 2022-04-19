@@ -11,10 +11,9 @@ const Register = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading,
-        error,
-    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+        loading
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating,] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
 
@@ -22,12 +21,12 @@ const Register = () => {
         navigate('/login');
     }
 
-    if(loading || updating){
+    if (loading || updating) {
         return <Loading></Loading>
     }
 
     if (user) {
-     console.log('user', user);  
+        console.log('user', user);
     }
 
     const handleRegister = async (event) => {

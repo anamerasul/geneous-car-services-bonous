@@ -10,12 +10,15 @@ import ServiceDetail from './Pages/ServiceDetail/ServiceDetail';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
+import RouteWithTitle from './Pages/Shared/RouteWithTitle/RouteWithTitle';
 
 function App() {
   return (
     <div>
       <Header></Header>
       <Routes>
+
+        {/* <RouteWithTitle title="my"></RouteWithTitle> */}
         <Route path="/" element={
 
           <RequireAuth>
